@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long ll;
+typedef unsigned long long ll;
 
-vector<ll> memo(100+1,-1);
+vector<ll> memo(64+1,-1);
 
 ll factorial_memo(int n) {
     if( memo[n] != -1 ) return memo[n];
