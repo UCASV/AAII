@@ -7,6 +7,8 @@ long fibonacci(int pos) {
     return fibonacci(pos - 1) + fibonacci(pos - 2);
 }
 
+/*************************************/
+
 long fibonacci_memo_aux(int pos, vector<long>& memo) {
     if( memo[pos] != -1 ) return memo[pos];
     memo[pos] = fibonacci_memo_aux(pos-1, memo) + fibonacci_memo_aux(pos-2, memo);
@@ -24,6 +26,7 @@ long fibonacci_memo(int pos) {
     return fibonacci_memo_aux(pos, memo);
 }
 
+/*************************************/
 int main(int argc, char* argv[]) {
     int pos = atoi(argv[1]);
     int mode = atoi(argv[2]);
