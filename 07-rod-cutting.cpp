@@ -6,9 +6,8 @@ typedef vector<int> vec;
 int Rod_Cutting(vec& P, int n) {
     vec R(n+1, -1);
     R[0] = 0;
-    R[1] = P[0];
 
-    for(int i = 2; i <= n; i++){
+    for(int i = 1; i <= n; i++){
         int q = INT_MIN;
         for(int j = 1; j <= i; j++)
             q = max(q, P[j-1] + R[i-j]);

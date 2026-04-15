@@ -14,10 +14,7 @@ Answer Rod_Cutting(vec& P, int n) {
     R[0] = 0;
     S[0] = "";
 
-    R[1] = P[0];
-    S[1] = "1";
-
-    for(int i = 2; i <= n; i++){
+    for(int i = 1; i <= n; i++){
         int q = INT_MIN;
         stringstream ss;
         for(int j = 1; j <= i; j++)
