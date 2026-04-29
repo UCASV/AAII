@@ -26,7 +26,7 @@ Answer Knapsack(vec& V, vec& W, int n, int C) {
     for(int i = 1; i <= n; i++)
         for(int j = 1; j <= C; j++)
             if( W[i-1] <= j )
-                if( V[i-1] + dp[i-1][j-W[i-1]] >= dp[i-1][j] ){
+                if( V[i-1] + dp[i-1][j-W[i-1]] > dp[i-1][j] ){
                     dp[i][j] = V[i-1] + dp[i-1][j-W[i-1]];
                     rec[i][j] = to_string(i) + ", " + rec[i-1][j-W[i-1]];
                 }
